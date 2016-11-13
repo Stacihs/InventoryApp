@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Collections;
 namespace InventoryApp
 {
     public partial class Form1 : Form
@@ -15,6 +15,8 @@ namespace InventoryApp
         public Form1()
         {
             InitializeComponent();
+
+            List<string> inventoryList = new List<string>(); 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +32,23 @@ namespace InventoryApp
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string input = Console.ReadLine();
+
+        }
+            
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void button3_Click(object sender, EventArgs e)
+        {
+            inventoryList.Add(txtItem.Text);
+            txtItem.Text = "";
         }
     }
 }
